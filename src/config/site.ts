@@ -5,6 +5,8 @@
  * Do not put internal service-proposal fees in this file.
  */
 
+import { publicUrl } from "@/lib/format";
+
 export type Localized = { en: string; te: string };
 
 export type VehicleId = "sedan" | "suv" | "tempo";
@@ -139,28 +141,28 @@ export const packages: TravelPackage[] = [
     duration: { en: "1 Day", te: "1 రోజు" },
     price: 2499,
     priceUnit: { en: "per car", te: "ఒక కారుకు" },
-    image: "/images/tirumala.jpg",
+    image: publicUrl("/images/tirumala.jpg"),
     imageAlt: {
       en: "Gopurams of the Tirumala Venkateswara Temple",
       te: "తిరుమల వెంకటేశ్వర ఆలయ గోపురాలు",
     },
     gallery: [
       {
-        src: "/images/tirumala.jpg",
+        src: publicUrl("/images/tirumala.jpg"),
         alt: {
           en: "A view of the Tirumala Venkateswara Temple",
           te: "తిరుమల వెంకటేశ్వర ఆలయ దృశ్యం",
         },
       },
       {
-        src: "/images/padmavathi.jpg",
+        src: publicUrl("/images/padmavathi.jpg"),
         alt: {
           en: "Main gopuram of the Padmavathi temple at Tiruchanur",
           te: "తిరుచానూరు పద్మావతి ఆలయ ప్రధాన గోపురం",
         },
       },
       {
-        src: "/images/hills.jpg",
+        src: publicUrl("/images/hills.jpg"),
         alt: { en: "Tirupati hills in the evening", te: "సాయంత్రం తిరుపతి కొండలు" },
       },
     ],
@@ -196,21 +198,21 @@ export const packages: TravelPackage[] = [
     duration: { en: "1 Day", te: "1 రోజు" },
     price: 3199,
     priceUnit: { en: "per car", te: "ఒక కారుకు" },
-    image: "/images/kalahasti.jpg",
+    image: publicUrl("/images/kalahasti.jpg"),
     imageAlt: {
       en: "Srikalahasti temple gopuram with Kannappa Hill behind it",
       te: "కన్నప్ప కొండ నేపథ్యంలో శ్రీకాళహస్తి ఆలయ గోపురం",
     },
     gallery: [
       {
-        src: "/images/kalahasti.jpg",
+        src: publicUrl("/images/kalahasti.jpg"),
         alt: {
           en: "Srikalahasti temple and Kannappa Hill",
           te: "శ్రీకాళహస్తి ఆలయం మరియు కన్నప్ప కొండ",
         },
       },
       {
-        src: "/images/kanipakam.jpg",
+        src: publicUrl("/images/kanipakam.jpg"),
         alt: { en: "Gopuram of the Kanipakam temple", te: "కాణిపాకం ఆలయ గోపురం" },
       },
     ],
@@ -275,14 +277,14 @@ export const packages: TravelPackage[] = [
     duration: { en: "3 Nights / 4 Days", te: "3 రాత్రులు / 4 రోజులు" },
     price: 8999,
     priceUnit: { en: "per car", te: "ఒక కారుకు" },
-    image: "/images/mahabalipuram.jpg",
+    image: publicUrl("/images/mahabalipuram.jpg"),
     imageAlt: {
       en: "The Shore Temple at Mahabalipuram beside the sea",
       te: "సముద్రం పక్కన మహాబలిపురం షోర్ టెంపుల్",
     },
     gallery: [
       {
-        src: "/images/mahabalipuram.jpg",
+        src: publicUrl("/images/mahabalipuram.jpg"),
         alt: { en: "Shore Temple, Mahabalipuram", te: "షోర్ టెంపుల్, మహాబలిపురం" },
       },
     ],

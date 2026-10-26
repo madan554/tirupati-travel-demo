@@ -2,6 +2,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { getPackage } from "@/config/site";
 import { useLanguage } from "@/context/LanguageContext";
 import { tx } from "@/i18n";
+import { publicUrl } from "@/lib/format";
 import { motion } from "framer-motion";
 
 export function Itinerary() {
@@ -19,7 +20,7 @@ export function Itinerary() {
         <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">{t.itinerary.lede}</p>
         <figure className="mt-8 overflow-hidden rounded-3xl">
           <img
-            src="/images/padmavathi.jpg"
+            src={publicUrl("/images/padmavathi.jpg")}
             alt={tx(lang, tour.gallery[1]?.alt ?? tour.imageAlt)}
             className="aspect-[4/3] w-full object-cover"
             loading="lazy"

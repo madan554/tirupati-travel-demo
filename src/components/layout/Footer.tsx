@@ -2,13 +2,14 @@ import { Logo } from "@/components/layout/Logo";
 import { photoCredits, site } from "@/config/site";
 import { useLanguage } from "@/context/LanguageContext";
 import { tx } from "@/i18n";
+import { publicUrl } from "@/lib/format";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 export function Footer() {
   const { t, lang } = useLanguage();
   const { pathname } = useLocation();
-  const hrefFor = (id: string) => (pathname === "/" ? `#${id}` : `/#${id}`);
+  const hrefFor = (id: string) => (pathname === "/" ? `#${id}` : `${publicUrl("/")}#${id}`);
   const year = new Date().getFullYear();
   const explore = [
     { id: "packages", label: t.nav.packages },

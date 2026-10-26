@@ -1,4 +1,5 @@
 import { packages, site } from "@/config/site";
+import { publicUrl } from "@/lib/format";
 import { useEnquiry } from "@/context/EnquiryContext";
 import { useLanguage } from "@/context/LanguageContext";
 import { tx } from "@/i18n";
@@ -42,7 +43,7 @@ export function Hero() {
     <section id="home" ref={ref} className="relative min-h-[100svh] overflow-hidden text-white">
       <motion.div className="absolute inset-0" style={reduce ? undefined : { y }}>
         <img
-          src="/images/tirumala-hero.jpg"
+          src={publicUrl("/images/tirumala-hero.jpg")}
           alt={tx(lang, site.heroImageAlt)}
           className="kenburns h-[118%] w-full object-cover"
           fetchPriority="high"

@@ -24,7 +24,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <EnquiryProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <MotionConfig reducedMotion="user">
             <ScrollManager />
             <SkipLink />

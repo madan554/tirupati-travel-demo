@@ -1,7 +1,7 @@
 import { Logo } from "@/components/layout/Logo";
 import { useEnquiry } from "@/context/EnquiryContext";
 import { useLanguage } from "@/context/LanguageContext";
-import { cx } from "@/lib/format";
+import { cx, publicUrl } from "@/lib/format";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -53,7 +53,7 @@ export function Navbar() {
     return () => observer.disconnect();
   }, [pathname]);
 
-  const hrefFor = (id: string) => (pathname === "/" ? `#${id}` : `/#${id}`);
+  const hrefFor = (id: string) => (pathname === "/" ? `#${id}` : `${publicUrl("/")}#${id}`);
 
   return (
     <header

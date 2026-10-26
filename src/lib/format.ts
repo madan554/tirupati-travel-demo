@@ -13,3 +13,7 @@ export function fill(template: string, vars: Record<string, string | number>) {
 export function cx(...parts: Array<string | false | null | undefined>) {
   return parts.filter(Boolean).join(" ");
 }
+
+export function publicUrl(path: string) {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+}

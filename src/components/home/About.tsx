@@ -2,6 +2,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { about } from "@/config/site";
 import { useLanguage } from "@/context/LanguageContext";
 import { tx } from "@/i18n";
+import { publicUrl } from "@/lib/format";
 
 export function About() {
   const { t, lang } = useLanguage();
@@ -9,7 +10,7 @@ export function About() {
     <section id="about" className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 md:px-6 md:py-28 lg:grid-cols-2" aria-labelledby="about-title">
       <Reveal>
         <div className="overflow-hidden rounded-[2rem]">
-          <img src="/images/hills.jpg" alt={t.about.imageAlt} className="aspect-[5/4] w-full object-cover" loading="lazy" />
+          <img src={publicUrl("/images/hills.jpg")} alt={t.about.imageAlt} className="aspect-[5/4] w-full object-cover" loading="lazy" />
         </div>
       </Reveal>
       <Reveal delay={0.08}>
